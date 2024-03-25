@@ -4,8 +4,7 @@ Important Notes
 
 ## Organizational Structure
 
-Please make sure that we are following the same naming and filing
-convention per the agreed upon structure below.
+Please see organizational structure, with notes below.
 
 - **Nhanes_Final/**
   - report.Rmd
