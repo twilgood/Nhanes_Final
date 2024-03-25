@@ -1,0 +1,37 @@
+---
+title: "NHANES Analysis"
+author: "Tyler Goodlett"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+here::i_am("report.Rmd")
+```
+
+## Introduction
+
+I am using the National Health Nutrition Examination Survey (NHANES) from 2015 - 2016. NHANES combines interviews and physical examinations to collect data on a wide range of topics including chronic disease and biophysical measurements. My objective is to better understand the distribution of key characteristics  among those aged 20 years or older and who have diabetes stratified by military service history. In subsequent analyses, a logistic regression model will be fit to assess significance in the relationship between ideal diabetes management (HbA1c &#8804; 7%). Additionally, I would like to examine the distribution of hypoglycemic control among those who have served in the military.
+
+## Table 1: Analytic Sample Characteristics
+
+```{r table1, include=T}
+table1 <- readRDS(here::here("Output/table1.rds"))
+
+table1
+
+```
+
+In table 1 we can see the frequency of key characteristics in our analytic sample that we will be using in a subsequent logistic regression model. This table is stratified by military service history. We can also see that there are more individuals who do not have military service experience compared to those who do. However, it is also clear that this characteristics are roughly distributed evenly between each of these groups.
+
+## Figure 1: Hypoglycemic Control by Military Service History
+
+```{r, fig.align='center'}
+barchart <- readRDS(here::here("Output/barchart.rds"))
+
+barchart
+
+```
+
+Figure 1 shows us our outcome of interest, optimal glycemic control defined by HbA1c &#8804; 7%, stacked with military service experience among our sample. We can see that in general there are less people with managed HbA1c, but a cursory analysis shows that the military service experience is generally distributed the same between our two outcomes.
