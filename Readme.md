@@ -2,6 +2,16 @@
 Important Notes
 ================
 
+## Generating Report
+
+To generate the report, users should enter `make report.html` in the terminal and all other prerequisites should make with this statement.
+The report will generate data on the sample characteristics stratified by military service experience and a stacked bar chart to show hypoglycemic control by military service history.
+
+## Updating Project Package Libraries
+
+- Ensure that your working directory is set in the project directory
+- Use `make install` in order to activate and synchronize the project packages
+
 ## Organizational Structure
 
 Please see organizational structure, with notes below.
@@ -30,8 +40,3 @@ Please see organizational structure, with notes below.
 - Makefile
 - Readme.md
 - gitignore
-
-## Generating Report
-
-To generate the report, users should enter "make report.html" in the terminal and all other prerequisites should make with this statement.
-The report will generate data on the sample characteristics stratified by military service experience and a stacked bar chart to show hypoglycemic control by military service history.

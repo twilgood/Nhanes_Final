@@ -1,6 +1,11 @@
 # Generate Report
 report.html: render_report.R report.Rmd barchart.rds table1.rds
 	Rscript render_report.R
+	
+# Sync Packages
+.PHONY: install
+install: sync_packages.R
+	Rscript sync_packages.R
 
 # Make Barchart:
 barchart.rds: Code/03_make_barchart.R labeledNhanes.rds
