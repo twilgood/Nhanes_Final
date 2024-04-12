@@ -19,6 +19,7 @@ Please see organizational structure, with notes below.
 - **Nhanes_Final/**
   - report.Rmd
   - render_report.R
+  - sync_packages.R
   - **Code/**
     - 00_make_data_clean.R
     - 01_labels.R
@@ -37,6 +38,10 @@ Please see organizational structure, with notes below.
   - **Clean_Data/**
     - nhanes.rds (generated from make)
     - labeledNhanes.rds (generated from make and this is the data used for table1 and the bar chart)
-- Makefile
-- Readme.md
-- gitignore
+  - Makefile
+  - Readme.md
+  - gitignore
+  - .Rprofile
+  - renv.lock
+  - **renv/**
+  
